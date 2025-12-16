@@ -1,11 +1,19 @@
+import { Route, Routes } from "react-router-dom"
+import { Link } from "react-router-dom"
+import Login from "./components/Login"
+import DashboardContent from "./components/DashboardContent"
 
 function App() {
-
   return (
     <>
-      <h1 class="text-3xl font-bold underline">
-        Hello world!
-      </h1>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route 
+        path="/dashboard" 
+        element={
+        <DashboardContent initialMenuId="dashboard" 
+        />}  />
+      </Routes>
     </>
   )
 }

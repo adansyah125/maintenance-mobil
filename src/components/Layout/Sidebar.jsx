@@ -16,27 +16,25 @@ const Sidebar = ({ activeMenuId, onMenuItemClick, onLogout, isOpen, onClose }) =
 
   // 3. Navigasi
   switch (item.id) {
-   case 'dashboard':
+   case 'beranda':
     navigate('/dashboard');
     break;
-   case 'kib':
-    navigate('/data-induk');
+   case 'layanan':
+    navigate('/layanan');
     break;
-   case 'reports':
-    navigate('/laporan-kir');
+   case 'kendaraan':
+    navigate('/kendaraan');
     break;
-   case 'print_labels':
-    navigate('/label');
+   case 'servis':
+    navigate('/servis');
+    break;
+    case 'riwayat':
+    navigate('/servis/riwayat');
     break;
    case 'laporan':
     navigate('/laporan');
     break;
-   case 'user':
-    navigate('/user');
-    break;
-   case 'AddData':
-    navigate('data-induk/tambah');
-    break;
+   
    default:
     navigate('/dashboard');
   }
@@ -79,17 +77,9 @@ const Sidebar = ({ activeMenuId, onMenuItemClick, onLogout, isOpen, onClose }) =
     <div>
      {/* Logo / Judul Aplikasi */}
      <div className="mb-2 px-2 m-auto">
-      <img
-       src="/logo.png" // Placeholder: Logo Putih
-       alt="Logo Bandung Kidul"
-       className="w-20 h-20 rounded-full object-cover m-auto"
-       onError={(e) => { 
-        e.target.onerror = null; 
-        e.target.src = "https://placehold.co/40x40/ffffff/1a1a4f?text=BK"; // Fallback ke Teks jika gambar gagal
-       }}
-      />
-      <p className="text-xs font-semibold text-indigo-200 mt-1 uppercase tracking-wide">
-       Simbada Bandung Kidul
+      
+      <p className="text-xs font-semibold text-center text-indigo-200 mt-1 uppercase tracking-wide">
+       Bengkel Mobil
       </p>
      </div>
      <p>-----------------------------</p>
@@ -102,7 +92,7 @@ const Sidebar = ({ activeMenuId, onMenuItemClick, onLogout, isOpen, onClose }) =
         <button
          key={item.id}
          onClick={() => handleClick(item)}
-         className={`w-full flex items-center space-x-3 px-3 py-2 rounded-lg text-sm font-semibold transition-colors ${
+         className={`w-full flex items-center space-x-3  py-2 rounded-lg text-sm font-semibold transition-colors ${
           isActive
            ? 'bg-white text-[#12154c]'
            : 'text-gray-300 hover:bg-white/10 hover:text-white'

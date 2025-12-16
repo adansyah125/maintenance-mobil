@@ -10,6 +10,11 @@ import DashboardContent from './DashboardContent';
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
+import Layanan from './Layanan';
+import DataKendaraan from './DataKendaraan';
+import Servis from './Servis';
+import Riwayat from './Riwayat';
+import Laporan from './Laporan';
 
 
 const Dashboard = ({ initialMenuId = 'dashboard' }) => {
@@ -63,20 +68,20 @@ const Dashboard = ({ initialMenuId = 'dashboard' }) => {
   switch (activeMenuId) {
    case 'dashboard':
     return <DashboardContent />;
-  //  case 'kib':
-  //   return (
-  //    <DataIndukContent
+   case 'layanan':
+    return (
+     <Layanan
     
-  //    />
-  //   );
-  //  case 'AddData':
-  //   return <AddData />;
-  //  case 'reports':
-  //   return <LaporanKIRContent />;
-  //  case 'addData':
-  //   return <AddDataKir />;
-  //  case 'print_labels':
-  //   return <PrintLabelsContent />;
+     />
+    );
+   case 'kendaraan':
+    return <DataKendaraan />;
+   case 'servis':
+    return <Servis />;
+   case 'riwayat':
+    return <Riwayat />;
+   case 'laporan':
+    return <Laporan />;
   //  case 'laporan':
   //   return <Laporan />;
   //  case 'user':
@@ -109,7 +114,7 @@ const Dashboard = ({ initialMenuId = 'dashboard' }) => {
     </div>
 
     {/* main tetap, isi komponen yang atur sendiri apa yang ke-print */}
-    <main className="p-8 flex-1">{renderContent()}</main>
+    <main className="p-4 flex-1">{renderContent()}</main>
 
     {/* footer juga disembunyikan saat print */}
     <footer className="p-4 text-center text-xs text-gray-500 border-t border-gray-200 print:hidden">

@@ -20,7 +20,7 @@ const Header = ({ activeMenuLabel, onToggleSidebar }) => (
 
         {/* Breadcrumb / Label Aktif */}
         <div className="text-sm flex items-center flex-1 min-w-0">
-            <span className="text-gray-500 font-medium hidden sm:inline">PKB / Kec. Bandung Kidul /</span>
+            <span className="text-gray-500 font-medium hidden sm:inline">Bengkel Mobil/</span>
             <span className={`font-bold text-indigo-700 ml-2 text-base truncate`}>{activeMenuLabel}</span>
         </div>
         

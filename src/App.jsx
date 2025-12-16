@@ -15,11 +15,46 @@ function App() {
           <Login />
           } />
 
-        {/* ADMIN */}
+        {/* DASHBOARD */}
         <Route
           path="/dashboard"
           element={
-            <Dashboard initialMenuId="dashboard" />
+            <Dashboard initialMenuId="beranda" />
+          }
+        />
+        {/* LAYANAN */}
+        <Route
+          path="/layanan"
+          element={
+            <Dashboard initialMenuId="layanan" />
+          }
+        />
+        {/* DATA KENDARAAN */}
+        <Route
+          path="/kendaraan"
+          element={
+            <Dashboard initialMenuId="kendaraan" />
+          }
+        />
+        {/* SERVIS KENDARAAN */}
+        <Route
+          path="/servis"
+          element={
+            <Dashboard initialMenuId="servis" />
+          }
+        />
+        {/* RIWAYAT SERVIS */}
+        <Route
+          path="/servis/riwayat"
+          element={
+            <Dashboard initialMenuId="riwayat" />
+          }
+        />
+        {/* LAPORAN */}
+        <Route
+          path="/laporan"
+          element={
+            <Dashboard initialMenuId="laporan" />
           }
         />
         </Routes>

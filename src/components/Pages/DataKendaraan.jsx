@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useCallback, useEffect, useState } from "react";
 import { supabase } from "../../lib/supabase";
 import { toast } from "react-toastify";
 
@@ -15,24 +15,30 @@ function DataKendaraan() {
     tahun: "",
   });
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+ 
 
-  const fetchData = async () => {
-    setLoading(true);
+  const fetchData = useCallback(async () => {
+  setLoading(true);
+  try {
     const { data, error } = await supabase
-      .from("vechile")
+      .from("vechile") 
       .select("*")
       .order("created_at", { ascending: false });
 
-    if (error) {
-      toast.error("Gagal memuat data kendaraan");
-    } else {
-      setvechiles(data);
-    }
+    if (error) throw error;
+    
+    setvechiles(data || []);
+  } catch (error) {
+    console.error("Error fetching vehicles:", error.message);
+    toast.error("Gagal memuat data kendaraan");
+  } finally {
     setLoading(false);
-  };
+  }
+}, []);
+  
+   useEffect(() => {
+    fetchData();
+  }, [fetchData]);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });

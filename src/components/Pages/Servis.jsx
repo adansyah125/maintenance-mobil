@@ -147,12 +147,12 @@ function Servis() {
                           : "hover:border-indigo-400"
                       }`}
                   >
-                    <div className="flex justify-between">
+                    <div className="flex justify-between text-black">
                       <span className="font-sans">
                         {s.nama_layanan}
                       </span>
                       <span className="font-bold text-black">
-                        Rp {Number(s.harga).toLocaleString("id-ID")}
+                        {/* Rp {Number(s.harga).toLocaleString("id-ID")} */}
                       </span>
                     </div>
                     {active && (
@@ -196,10 +196,10 @@ function Servis() {
 
           {/* Total */}
           <div className="flex justify-between items-center border-t pt-4">
-            <span className="font-semibold">Estimasi Biaya</span>
+            {/* <span className="font-semibold">Estimasi Biaya</span>
             <span className="text-xl font-bold">
               Rp {totalHarga.toLocaleString("id-ID")}
-            </span>
+            </span> */}
           </div>
 
           {/* Submit */}

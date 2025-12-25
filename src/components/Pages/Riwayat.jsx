@@ -152,7 +152,7 @@ function Riwayat() {
       {/* TOTAL & ACTION */}
       <div className="flex justify-between items-center border-t pt-3">
         <span className="font-bold text-indigo-600">
-          Rp {item.total.toLocaleString("id-ID")}
+          {/* Rp {item.total.toLocaleString("id-ID")} */}
         </span>
 
         {item.status === "proses" && (

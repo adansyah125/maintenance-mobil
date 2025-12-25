@@ -212,21 +212,20 @@ const DashboardContent = () => {
 </div>
         {/* DAFTAR LAYANAN */}
         <div className="border-l border-gray-100 pl-0 lg:pl-8">
-          <h3 className="text-lg font-bold mb-5">
-            Daftar Layanan & Harga
+          <h3 className="text-lg text-center font-bold mb-5">
+            Daftar Layanan
           </h3>
 
           <div className="space-y-4">
             {[
-              { name: "Ganti Oli", price: "150.000" },
-              { name: "Tune Up Mesin", price: "300.000" },
-              { name: "Servis Rem", price: "250.000" },
-              { name: "Spooring & Balancing", price: "400.000" },
+              { name: "Ganti Oli" },
+              { name: "Tune Up Mesin" },
+              { name: "Servis Rem" },
+              { name: "Spooring & Balancing" },
             ].map((item, i) => (
               <div key={i} className="flex justify-between text-sm">
                 <span className="font-medium text-gray-700">{item.name}</span>
                 <span className={`font-bold text-${PRIMARY_COLOR}-600`}>
-                  Rp {item.price}
                 </span>
               </div>
             ))}

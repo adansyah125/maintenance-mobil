@@ -137,7 +137,7 @@ function Laporan() {
               <th className="px-4 py-3">Tanggal</th>
               <th className="px-4 py-3">Kendaraan</th>
               <th className="px-4 py-3">Layanan</th>
-              <th className="px-4 py-3">Total</th>
+              {/* <th className="px-4 py-3">Total</th> */}
               <th className="px-4 py-3">Status</th>
             </tr>
           </thead>
@@ -155,9 +155,9 @@ function Laporan() {
                 <td className="px-4 py-3">
                   {item.layanan.nama_layanan}
                 </td>
-                <td className="px-4 py-3  font-semibold">
+                {/* <td className="px-4 py-3  font-semibold">
                   Rp {Number(item.layanan.harga).toLocaleString("id-ID")}
-                </td>
+                </td> */}
                 <td className="px-4 py-3 ">
                   <span className="text-xs bg-green-100 text-green-700 px-3 py-1 rounded-full">
                     Selesai

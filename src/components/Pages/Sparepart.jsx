@@ -159,8 +159,7 @@ const Sparepart = () => {
       <table className="w-full text-sm">
         <thead className="bg-gray-100 text-gray-600 uppercase text-xs">
           <tr>
-            <th className="p-3">Gambar</th>
-            <th>Kode</th>
+            <th className="p-3">Kode</th>
             <th>Nama</th>
             <th>Stok</th>
             <th>Harga</th>
@@ -173,7 +172,7 @@ const Sparepart = () => {
               key={item.id}
               className="hover:bg-gray-50 transition text-center"
             >
-              <td className="p-3">
+              {/* <td >
                 {item.gambar ? (
                   <img
                     src={item.gambar}
@@ -186,8 +185,8 @@ const Sparepart = () => {
                     No Img
                   </div>
                 )}
-              </td>
-              <td className="font-medium">{item.kd_sparepart}</td>
+              </td> */}
+              <td className="font-medium p-3">{item.kd_sparepart}</td>
               <td>{item.nama}</td>
               <td className="text-center">{item.stok}</td>
               <td className="font-semibold text-indigo-600">
@@ -221,7 +220,7 @@ const Sparepart = () => {
           className="bg-white rounded-xl shadow p-4 space-y-2"
         >
           <div className="flex gap-3">
-            {item.gambar ? (
+            {/* {item.gambar ? (
               <img
                 src={item.gambar}
                 className="w-16 h-16 rounded object-cover"
@@ -230,7 +229,7 @@ const Sparepart = () => {
               <div className="w-16 h-16 bg-gray-200 rounded flex items-center justify-center text-xs">
                 No Img
               </div>
-            )}
+            )} */}
 
             <div>
               <p className="font-bold">{item.nama}</p>

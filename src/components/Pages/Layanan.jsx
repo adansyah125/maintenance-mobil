@@ -137,7 +137,7 @@ function Layanan() {
 
             <div className="flex justify-between items-center">
               <span className="text-lg font-bold text-black">
-                Rp{Number(service.harga).toLocaleString("id-ID")}
+                {/* Rp{Number(service.harga).toLocaleString("id-ID")} */}
               </span>
 
               <div className="flex gap-2">
